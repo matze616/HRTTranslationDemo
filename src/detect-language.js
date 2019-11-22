@@ -100,6 +100,9 @@ function main(params) {
 }
 
 /*
+https://eu-de.functions.cloud.ibm.com/api/v1/web/cb82dc99-bde9-4300-900d-ca3e8a0d53f6/hrt-demo/identify-and-translate/?text=ako%20sa%20m%C3%A1%C5%A1
 ibmcloud fn activation list -> Liste aller Aktivitäten
 ibmcloud fn activation get <id> -> log einer Aktivität
- */
+ibmcloud fn action update hrt-demo/detect-language --docker ibmarc/cloud-functions-ai-translator:v1 src/detect-language.js --param-file config/ai-params.json --web true
+ibmcloud fn action update hrt-demo/translate --docker ibmarc/cloud-functions-ai-translator:latest src/translate.js -P config/ai-params.json --web true
+*/
